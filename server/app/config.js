@@ -1,7 +1,6 @@
 // Load the express module to create a web application
 const path = require("path");
 const express = require("express");
-const cors = require("cors");
 
 const app = express();
 
@@ -25,13 +24,8 @@ const app = express();
 // 3. Uncomment the section `app.use(cors({ origin: [...] }))`
 // 4. Be sure to only have URLs in the array with domains from which you want to allow requests.
 // For example: ["http://mysite.com", "http://another-domain.com"]
-app.use(
-  cors({
-    origin: [
-      process.env.CLIENT_URL, // keep this one, after checking the value in `server/.env`",
-    ],
-  })
-);
+
+/** One Piece of Puzzle */
 
 /* ************************************************************************* */
 
