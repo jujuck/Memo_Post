@@ -1,13 +1,13 @@
 import { useLoaderData } from "react-router-dom";
-import MontainCard from "../components/MontainCard";
+import MountainCard from "../components/MountainCard";
 
 function Montains() {
   /** One Piece of Puzzle, don't forget to uncomment line 1 and 2 */
-  const montains = useLoaderData();
+  const mountains = useLoaderData();
   return (
     <section className="container">
-      {montains.map((montain) => (
-        <MontainCard montain={montain} key={montain.id} />
+      {mountains.map((mountain) => (
+        <MountainCard mountain={mountain} key={mountain.id} />
       ))}
     </section>
   );

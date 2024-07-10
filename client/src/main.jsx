@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import connexion from "./services/connexion";
 import App from "./App";
-import Montains from "./pages/Montains";
+import Mountains from "./pages/Mountains";
 
 const router = createBrowserRouter([
   /** One Piece of Puzzle, don't forget to uncomment line 6,7,8  */
@@ -15,12 +15,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Montains />,
+        element: <Mountains />,
         loader: async () => {
-          const montains = await connexion.get(
+          const mountains = await connexion.get(
             `${import.meta.env.VITE_API_URL}/api/mountains`
           );
-          return montains.data;
+          return mountains.data;
         },
       },
     ],

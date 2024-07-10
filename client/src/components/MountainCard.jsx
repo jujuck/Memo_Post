@@ -1,27 +1,27 @@
 import PropTypes from "prop-types";
-import montainImage from "../assets/images/montains_default.jpg";
+import mountainImage from "../assets/images/mountains_default.jpg";
 
 /** One Piece of Puzzle, don't forget to uncomment line 2 and 8 */
-function MontainCard({ montain }) {
+function mountainCard({ mountain }) {
   return (
     <article
       className="card"
-      style={{ backgroundImage: `url(${montainImage})` }}
+      style={{ backgroundImage: `url(${mountainImage})` }}
     >
       <div>
-        <h2>{montain.title}</h2>
-        <h3>{montain.subtitle}</h3>
-        <p>{montain.summary}</p>
+        <h2>{mountain.title}</h2>
+        <h3>{mountain.subtitle}</h3>
+        <p>{mountain.summary}</p>
         <h6>
-          {montain.name} - <small>{montain.birthday.split("T")[0]}</small>
+          {mountain.name} - <small>{mountain.birthday.split("T")[0]}</small>
         </h6>
       </div>
     </article>
   );
 }
 /** One piece of Puzzle, don't forget to uncomment line 1 */
-MontainCard.propTypes = {
-  montain: PropTypes.shape({
+mountainCard.propTypes = {
+  mountain: PropTypes.shape({
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
@@ -29,4 +29,4 @@ MontainCard.propTypes = {
     birthday: PropTypes.string.isRequired,
   }).isRequired,
 };
-export default MontainCard;
+export default mountainCard;
