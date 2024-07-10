@@ -26,7 +26,15 @@ const app = express();
 // For example: ["http://mysite.com", "http://another-domain.com"]
 
 /** One Piece of Puzzle */
+const cors = require("cors");
 
+app.use(
+  cors({
+    origin: [
+      process.env.CLIENT_URL, // keep this one, after checking the value in`server/.env`",
+    ],
+  })
+);
 /* ************************************************************************* */
 
 // Request Parsing: Understanding the purpose of this part
