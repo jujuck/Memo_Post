@@ -2,7 +2,7 @@
 const mountainsModel = require("../models/mountains");
 
 // The B of BREAD - Browse (Read All) operation
-/** One Piece of Puzzle, don't forget to uncomment line 2 and 9 */
+
 const browse = async (req, res, next) => {
   try {
     // Fetch all montains from the database
@@ -16,7 +16,17 @@ const browse = async (req, res, next) => {
   }
 };
 
+// The A of BREAD - Add (Create) operation
+const add = async (req, res /** ,next */) => {
+  // Extract the mountain data from the request body
+  /** One Piece of Puzzle */
+
+  /** One Piece of Puzzle, don't forget to delete the line below and to uncomment next */
+  res.sendStatus(201);
+};
+
 // Ready to export the controller functions
 module.exports = {
   browse,
+  add,
 };

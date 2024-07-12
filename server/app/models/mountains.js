@@ -1,4 +1,3 @@
-/** One Piece of Puzzle */
 const client = require("../../database/client");
 
 const readAll = async () => {
@@ -11,4 +10,7 @@ const readAll = async () => {
   return mountains;
 };
 
-module.exports = { readAll };
+// The C of CRUD - Create operation
+/** One Piece of Puzzle, don't forget to uncomment le line 17 */
+
+module.exports = { readAll /* create */ };

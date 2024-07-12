@@ -1,11 +1,11 @@
-import { Outlet } from "react-router-dom";
+import { Outlet /** ,Link */ } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
     <main>
       <header>
-        <h1>Get All Puzzle</h1>
+        {/** One piece of Puzzle, don't forget to uncomment line 1 */}
       </header>
 
       <Outlet />

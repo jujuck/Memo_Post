@@ -6,7 +6,6 @@ body {
   margin: 0;
 }
 
-/** One Piece of Puzzle */
 .card {
   border: 1px solid lightgrey;
   box-shadow: 2px 2px 5px 2px lightgrey;
@@ -25,7 +24,7 @@ body {
     text-align: center;
   }
 }
-/** One Piece of Puzzle */
+
 header,
 footer {
   text-align: center;
@@ -37,4 +36,23 @@ footer {
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: space-around;
+}
+
+/**One Piece of puzzle */
+
+/** One Piece of puzzle */
+
+input,
+textarea,
+select {
+  width: 95%;
+  border: 1px solid lightskyblue;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+select {
+  width: 98%;
+  background-color: white;
 }

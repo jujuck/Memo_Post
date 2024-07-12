@@ -6,9 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import connexion from "./services/connexion";
 import App from "./App";
 import Mountains from "./pages/Mountains";
+// import MountainsForms from "./pages/MountainsForms";
 
 const router = createBrowserRouter([
-  /** One Piece of Puzzle, don't forget to uncomment line 6,7,8  */
   {
     path: "",
     element: <App />,
@@ -23,6 +23,7 @@ const router = createBrowserRouter([
           return mountains.data;
         },
       },
+      /** One Piece of Puzzle, don't forget to uncomment line 9 */
     ],
   },
 ]);

@@ -26,15 +26,7 @@ const app = express();
 // For example: ["http://mysite.com", "http://another-domain.com"]
 
 /** One Piece of Puzzle */
-const cors = require("cors");
 
-app.use(
-  cors({
-    origin: [
-      process.env.CLIENT_URL, // keep this one, after checking the value in`server/.env`",
-    ],
-  })
-);
 /* ************************************************************************* */
 
 // Request Parsing: Understanding the purpose of this part
@@ -50,7 +42,8 @@ app.use(
 
 // Uncomment one or more of these options depending on the format of the data sent by your client:
 
-// app.use(express.json());
+/** One piece of puzzle */
+
 // app.use(express.urlencoded());
 // app.use(express.text());
 // app.use(express.raw());
@@ -102,22 +95,19 @@ app.use("/api", router);
 // To enable production configuration:
 // 1. Uncomment the lines related to serving static files and redirecting unhandled requests.
 // 2. Ensure that the `reactBuildPath` points to the correct directory where your client's build artifacts are located.
-const reactBuildPath = path.join(__dirname, "/../../client/dist");
-const publicFolderPath = path.join(__dirname, "/../public");
-
 // Serve react resources
-
-app.use(express.static(reactBuildPath));
+// const reactBuildPath = path.join(__dirname, "/../../client/dist");
+// app.use(express.static(reactBuildPath));
 
 // Serve server resources
-
+const publicFolderPath = path.join(__dirname, "/../public");
 app.get("*.*", express.static(publicFolderPath, { maxAge: "1y" }));
 
 // Redirect unhandled requests to the react index file
 
-app.get("*", (_, res) => {
-  res.sendFile(path.join(reactBuildPath, "/index.html"));
-});
+// app.get("*", (_, res) => {
+// res.sendFile(path.join(reactBuildPath, "/index.html"));
+// });
 
 /* ************************************************************************* */
 

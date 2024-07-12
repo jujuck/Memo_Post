@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import mountainImage from "../assets/images/mountains_default.jpg";
 
-/** One Piece of Puzzle, don't forget to uncomment line 2 and 8 */
 function mountainCard({ mountain }) {
   return (
     <article
@@ -19,7 +18,7 @@ function mountainCard({ mountain }) {
     </article>
   );
 }
-/** One piece of Puzzle, don't forget to uncomment line 1 */
+
 mountainCard.propTypes = {
   mountain: PropTypes.shape({
     title: PropTypes.string.isRequired,

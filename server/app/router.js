@@ -7,11 +7,13 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import montains module for handling item-related operations
-/** One Piece of puzzle */
 const mountains = require("./controllers/mountains");
 
 // Route to get a list of montains
 router.get("/mountains", mountains.browse);
+
+/** One Piece of Puzzle */
 /* ************************************************************************* */
+/** One Piece of puzzle */
 
 module.exports = router;
